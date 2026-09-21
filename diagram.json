@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "author": "Grupo Sprint 3",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-pi-pico", "id": "pico", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-led", "id": "ledVerde", "top": -110, "left": 160, "attrs": { "color": "green" } },
+    { "type": "wokwi-led", "id": "ledAmarelo", "top": -110, "left": 220, "attrs": { "color": "yellow" } },
+    { "type": "wokwi-led", "id": "ledVermelho", "top": -110, "left": 280, "attrs": { "color": "red" } },
+    { "type": "wokwi-resistor", "id": "r1", "top": -30, "left": 160, "attrs": { "value": "330" } },
+    { "type": "wokwi-resistor", "id": "r2", "top": -30, "left": 220, "attrs": { "value": "330" } },
+    { "type": "wokwi-resistor", "id": "r3", "top": -30, "left": 280, "attrs": { "value": "330" } }
+  ],
+  "connections": [
+    [ "pico:GP15", "r1:1", "green", [] ],
+    [ "r1:2", "ledVerde:A", "green", [] ],
+    [ "ledVerde:C", "pico:GND.8", "black", [] ],
+
+    [ "pico:GP14", "r2:1", "gold", [] ],
+    [ "r2:2", "ledAmarelo:A", "gold", [] ],
+    [ "ledAmarelo:C", "pico:GND.8", "black", [] ],
+
+    [ "pico:GP13", "r3:1", "red", [] ],
+    [ "r3:2", "ledVermelho:A", "red", [] ],
+    [ "ledVermelho:C", "pico:GND.8", "black", [] ]
+  ]
+}
